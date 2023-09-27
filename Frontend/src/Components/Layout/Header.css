@@ -1,0 +1,7 @@
+
+.header-main-container{
+    height: 10vmin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
