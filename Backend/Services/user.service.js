@@ -16,8 +16,13 @@ const deleteTaskIdfromTaskArray = async (req, res) => {
     { new: true }
   )
 }
+
+const deletAllUsers = async (req, res) => {
+  return await userCollection.deleteMany();
+}
 module.exports = {
   findUser,
   findUserWithUserId,
-  deleteTaskIdfromTaskArray
+  deleteTaskIdfromTaskArray,
+  deletAllUsers
 }
