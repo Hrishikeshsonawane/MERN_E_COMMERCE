@@ -8,7 +8,7 @@ const app = require('./app');
 const dotenv = require('dotenv/config');
 const port = process.env.PORT || 3000;
 const con_url = process.env.DB_CONNECTION;
-const colors = require('colors')
+const colors = require('colors');
 
 var server;
 mongoose
@@ -16,7 +16,7 @@ mongoose
   .then((res) => {
     console.log('mongodb connected sucessfully========>'.green);
 
-    server = app.listen(5000, () => { });
+    server = app.listen(port, () => { });
     if (port) {
       console.log(`server started on port========> ${port}`.green);
     }
