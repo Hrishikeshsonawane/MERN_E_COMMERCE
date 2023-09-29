@@ -16,9 +16,14 @@ const userRegistrationSchema = mongoose.Schema({
   mobileNo: {
     type: Number
   },
-  tasks : [{
-    type : mongoose.Schema.Types.ObjectId,
-    ref : 'tasks',
+  role: {
+    type: String,
+    enum: ['USER', 'ADMIN'],
+    default: 'USER'
+  },
+  tasks: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'tasks',
   }]
 }, {
   timestamps: true, // Add timestamps option here

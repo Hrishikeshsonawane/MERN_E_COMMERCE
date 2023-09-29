@@ -3,7 +3,8 @@ import {BsMouse} from "react-icons/bs"
 import "./Home.css"
 import Product from './Product'
 import MetaData from '../Layout/MetaData'
-
+import Footer from "../Layout/Footer/Footer"
+import Header from "../Layout/Header"
 
 
 const product={
@@ -15,6 +16,7 @@ const product={
 export default function Home() {
   return (
    <>
+   <Header />
    <MetaData title="Homepage is working" />
    <div className="banner">
     <p>Welcome to E-Commerse</p>
@@ -44,6 +46,7 @@ export default function Home() {
 
 
    </div>
+   <Footer/>
    </>
   )
 }

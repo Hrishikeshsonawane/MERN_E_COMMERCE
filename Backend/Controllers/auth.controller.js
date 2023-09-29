@@ -7,7 +7,10 @@ const jwt = require('jsonwebtoken');
 // ----------------------------------------------------------------------------------- Register User----------------------------------------------------------------------
 const registerUser = async (req, res) => {
   const isUserRegistered = await authService.isEmailRegistered(req);
+  console.log("Register Request", req);
 
+
+  
   if (isUserRegistered == true) {
     return res.status(409).send({ message: 'user has already been regestered with this mail', success: false })
   }
@@ -35,6 +38,7 @@ const registerUser = async (req, res) => {
 
 }
 
+
 // ----------------------------------------------------------------------------------- Login User----------------------------------------------------------------------
 
 const login = async (req, res) => {
@@ -52,7 +56,7 @@ const login = async (req, res) => {
 
       // generate jwt token
       const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY);
-      res.send({ success: true, message: 'Logged In Sucessfully', token: token });
+      res.send({ success: true, message: 'Logged In Sucessfully', token: token, role: user.role });
     }
     else {
       res.send({ success: false, message: "Invalid User id and password" })
@@ -62,7 +66,6 @@ const login = async (req, res) => {
     res.send({ success: false, message: "User is not registered with given email" });
   }
 }
- 
 
 
 module.exports = {

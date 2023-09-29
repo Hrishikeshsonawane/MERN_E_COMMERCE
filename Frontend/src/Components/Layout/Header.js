@@ -1,43 +1,54 @@
-import React from "react";
-import { ReactNavbar } from "overlay-navbar";
-import logo from "../../Sources/logo E-com.png"
+import { useState } from "react";
+import "./Header.css"
+import { CgProfile } from "react-icons/cg"
+import { AiOutlineShoppingCart } from "react-icons/ai"
+import { BiSearchAlt2 } from "react-icons/bi"
+import DropDownList from './DropDownList'
+export default function Header() {
+
+ const [isDropdownVisible, setDropdownVisible] = useState(false);
 
 
-const Header = () => {
-  const options = {
-    burgerColorHover: "#eb4034",
-    logo,
-    logoWidth: "20vmax",
-    navColor1: "white",
-    logoHoverSize: "10px",
-    logoHoverColor: "#eb4034",
-    link1Text: "Home",
-    link2Text: "Products",
-    link3Text: "Contact",
-    link4Text: "About",
-    link1Url: "/",
-    link2Url: "/products",
-    link3Url: "/contact",
-    link4Url: "/about",
-    link1Size: "1.3vmax",
-    link1Color: "rgba(35, 35, 35,0.8)",
-    nav1justifyContent: "flex-end",
-    nav2justifyContent: "flex-end",
-    nav3justifyContent: "flex-start",
-    nav4justifyContent: "flex-start",
-    link1ColorHover: "#eb4034",
-    link1Margin: "1vmax",
-    profileIconUrl: "/login",
-    profileIconColor: "rgba(35, 35, 35,0.8)",
-    searchIconColor: "rgba(35, 35, 35,0.8)",
-    cartIconColor: "rgba(35, 35, 35,0.8)",
-    profileIconColorHover: "#eb4034",
-    searchIconColorHover: "#eb4034",
-    cartIconColorHover: "#eb4034",
-    cartIconMargin: "1vmax",
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
   };
 
-  return <ReactNavbar {...options} />;
-};
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
 
-export default Header;
+
+  const handleSearchProduct = () => {
+    alert("Search product")
+  }
+  const handleShoppingCart = () => {
+    alert("Shopping Cart")
+  }
+
+  const handleProfile = () => {
+    alert("Profile component")
+  }
+  return (
+    <div className='header-main-container'>
+      <div className="projectName">
+        <h4>E-Commerce</h4>
+      </div>
+
+
+     <div className="Header_wrapper">
+      <div className="searchProduct">
+        <button onClick={handleSearchProduct}><BiSearchAlt2 /></button>
+      </div>
+      <div className="shoppingCart">
+        <button onClick={handleShoppingCart}><AiOutlineShoppingCart /> </button>
+
+      </div>
+      <div className='profile'   onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}>
+        <button onClick={handleProfile}><CgProfile /> </button>
+        {isDropdownVisible && <DropDownList />}
+      </div>
+      </div>
+    </div>
+  )
+}
