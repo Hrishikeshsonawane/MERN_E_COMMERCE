@@ -53,14 +53,18 @@ const productCollection = mongoose.Schema({
     ratings: {
         type: String,
         default: '0.0',
-        required: true
     },
     description: {
         type: String,
         required: true
     },
     image: {
-        type: Buffer
+        type: Buffer,
+        required: true
+    },
+    quantity: {
+        type: Number,
+        default: 1,
     }
 
 })
