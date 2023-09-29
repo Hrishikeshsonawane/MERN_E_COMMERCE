@@ -19,15 +19,12 @@ export default function Header() {
 
 
   const handleSearchProduct = () => {
-    alert("Search product")
-  }
+   }
   const handleShoppingCart = () => {
-    alert("Shopping Cart")
-  }
+   }
 
   const handleProfile = () => {
-    alert("Profile component")
-  }
+   }
   return (
     <div className='header-main-container'>
       <div className="projectName">

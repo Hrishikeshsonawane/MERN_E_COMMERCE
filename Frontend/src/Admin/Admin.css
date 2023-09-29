@@ -1,0 +1,46 @@
+.adminContainer {
+
+   width: 100vw;
+   height: 100vh;
+   padding: 0%;
+   margin: 0%;
+   overflow-x: hidden;
+}
+
+
+.adminHeader {
+   height: 10vh;
+   background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 100%);
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+   margin-bottom: 0px !important;
+}
+
+.adminHeader>h2 {
+   display: flex;
+   justify-content: center;
+   font-size: 2vmax;
+     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,168,255,1) 100%);   height: 10vh;
+   font-family: emoji;
+   margin-bottom: 0px !important;
+}
+
+.ag-theme-alpine {
+   overflow-x: hidden;
+   width: 100vw;
+   height: 100%;
+   border: 1px solid black;
+}
+
+.adminMain {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: left;
+}
+
+/* .adminSections{
+    width : 90vw;
+    height : 10vh;
+    background-color:gray;
+  } */
