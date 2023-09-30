@@ -7,16 +7,22 @@ import Profile from '../Profile/Profile';
 import Orders from '../Orders/Orders';
 import Admin from '../../Admin/Admin';
 import DashBoard from '../../Admin/Dashboard/DashBoard';
+import Cart from '../Cart/Cart';
+import ProductOverView from '../ProductOverView/ProductOverView';
 
 export default function Main() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route extract path='/' element={<Home />} />
+        <Route extract path='/*' element={<Home />} />
         <Route extract path='/login' element={<Login />} />
-        <Route extract path='/Profile' element={<Profile/>} />
-        <Route extract path='/Orders' element={<Orders/>} />
+        <Route extract path='Home /Profile' element={<Profile/>} />
+        <Route extract path='Home/Orders' element={<Orders/>} />
         <Route extract path='/Admin/*' element={<Admin/>} />
+        <Route extract path='Home/Cart' element={<Cart/>} />
+        <Route extract path='Home/ProductOverview' element={<ProductOverView/>} />
+
+
       </Routes>
     </BrowserRouter>
   )

@@ -1,11 +1,14 @@
 
 .header-main-container{
-    height: 10vmin;
+     height: 10vmin;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
-}
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    
+  
+  }
 
 .Header_wrapper{
     display: flex;
@@ -25,20 +28,25 @@
         letter-spacing: 1px; 
         margin-bottom: 10px;  
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+        cursor: pointer;
 
     }
 
-.searchProduct button {
-    background-color: #ffffff;
-    color: #131111;
+.searchProduct input {
+   width: 50vw;
+   height: 40px;
+
+   }
+   .searchProduct button{
+    background-color: #ffffff;  
+    color: #131111; 
     border: none;
-    padding: 10px 13px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 7px 13px;
+     cursor: pointer;
+    transition: background-color 0.3s ease;  
     font-size: 1.5 vmax;
-  }
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+   }
   
    .shoppingCart button {
     background-color: #ffffff;  
@@ -68,7 +76,7 @@
   }
   
   .searchProduct button:hover,
-  .shoppingCart button:hover,
+  .shoppingP button:hover,
   .profile button:hover {
     background-color: #ccc;
   }

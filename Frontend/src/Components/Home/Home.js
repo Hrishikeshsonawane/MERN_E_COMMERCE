@@ -1,51 +1,29 @@
 import React from 'react'
-import {BsMouse} from "react-icons/bs"
 import "./Home.css"
-import Product from './Product'
-import MetaData from '../Layout/MetaData'
+
 import Footer from "../Layout/Footer/Footer"
 import Header from "../Layout/Header"
+import Cart from '../Cart/Cart'
+import MainProductPage from './HomeContent/MainProductPage'
+import { Routes ,Route } from 'react-router-dom'
+import ProductOverView from '../ProductOverView/ProductOverView'
 
 
-const product={
-  name:"Blue Huskey",
-  price: "3000",
-  id:"hrishi",
-  images:[{url: "https://i.ibb.co/DRST11n/1.webp"}]
-}
+
 export default function Home() {
   return (
    <>
    <Header />
-   <MetaData title="Homepage is working" />
-   <div className="banner">
-    <p>Welcome to E-Commerse</p>
-    <h1>Find amazing products below</h1>
-    <a href="#container">
-        <button>
-            scroll <BsMouse />
-        </button>
-    </a>
-   </div>
-   <h2 className="homeHeading">Featured Products</h2>
-   <div className="container" id='container'>
-   <Product product={product} />
-   <Product product={product} />
 
-   <Product product={product} />
+   <Routes>
+    <Route path={"/"} element={<MainProductPage />} ></Route>
+    <Route path={"/Cart"} element={<Cart />}></Route>
+    <Route path={"/ProductOverview"} element={<ProductOverView/>} ></Route>
+    
 
-   <Product product={product} />
-
-   <Product product={product} />
-
-   <Product product={product} />
-
-   <Product product={product} />
-
-   <Product product={product} />
-
-
-   </div>
+   </Routes>
+   
+  
    <Footer/>
    </>
   )

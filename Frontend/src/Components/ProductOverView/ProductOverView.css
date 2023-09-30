@@ -1,0 +1,16 @@
+.overViewContainer{
+    width: 100%;
+    height: 100vh;
+    padding: 5%;
+    margin: 0%;
+}
+
+
+.productImage img{
+    position: relative;
+    width: 16%;
+}
+
+.productOverViewName{
+    position: relative;
+}

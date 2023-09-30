@@ -12,12 +12,12 @@ export default function DropDownList() {
   }
 
     const handleProfile=()=>{
-  navigate("/Profile")
+  navigate("/Home/Profile")
       }
 
 
       const handleOrders=()=>{
-        navigate("/Orders")
+        navigate("/Home/Orders")
       }
 
       const handleLogOut=()=>{
