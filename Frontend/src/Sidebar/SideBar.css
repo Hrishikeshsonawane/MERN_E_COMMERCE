@@ -1,0 +1,32 @@
+.sideBarContainer{
+    width: 15vw;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+z-index: 100;
+}
+
+
+.links{
+    list-style: none;
+    height: 10vh;
+    width: 89%;
+    display: flex;
+    align-items:center;
+    gap : 10px;
+    padding-left:  20px;
+     font-size: 2vmax;
+     cursor:  pointer;
+}
+
+
+
+.links > span{
+    text-align: start;
+    font-size: 1.2vmax;
+ 
+}
+
+.nav-list :hover{
+    background-color: #ccc;
+}
+
