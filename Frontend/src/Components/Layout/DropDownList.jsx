@@ -21,7 +21,7 @@ export default function DropDownList() {
       }
 
       const handleLogOut=()=>{
-        alert("logout")
+        navigate("/login")
       }
  
 

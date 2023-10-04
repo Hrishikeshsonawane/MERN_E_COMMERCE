@@ -18,7 +18,7 @@ export default function Product({product}) {
 
         <Link className='productCard' to={Product.id}>
 
-            <img src={product?.images[0]?.url} alt={product.name} />
+            <img className='proImg' src={product?.images[0]?.url} alt={product.name} />
             <div>
                 <ReactStars {...options} /> 
                 <span>256 Reviews</span>
