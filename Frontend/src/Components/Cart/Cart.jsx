@@ -97,7 +97,7 @@ const Cart = () => {
                                 <h6>111 $</h6>
                             </span>
                         </div>
-                        <button >Buy Now</button>
+                        <button className='cartBuyBtn' >Buy Now</button>
 
                     </div>
                 </div>

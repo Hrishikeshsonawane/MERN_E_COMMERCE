@@ -15,12 +15,40 @@
     width: 40%;
 }
 
+
+.subcontent_Overview{
+    padding: 17px;
+    width: 100%;
+}
+
+.AddtoCartBtn{
+    width: 100%;
+    height: 8vh;
+    border: 2px solid blueviolet;
+    background: transparent;
+    color: black;
+    background-color: rgb(244, 243, 245);
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin-top: 10px;
+}
+
 .productOverViewName{
     display: flex;
     position: relative;
     right: 26%;
     font-size: 1.5rem;
     font-weight: 400;
+}
+
+
+.subFieldsCart_overview {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: start;
 }
 
 .productOverViewPrice{
@@ -50,9 +78,6 @@
 }
 
 
-.AddtoCartBTN{
-    background-color: wheat ;
-}
 
 .productOverviewDetails > div > span{
     display: flex;
@@ -69,6 +94,20 @@
 }
 
 
+.cartBuyBtn_Overview{
+    margin-top: 10px;
+    width: 100%;
+    height: 8vh;
+    border: none;
+    background: transparent;
+    background-color: rgb(54, 29, 155);
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+
+
+}
  
 
 

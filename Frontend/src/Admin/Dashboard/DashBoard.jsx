@@ -39,7 +39,7 @@ const defaultColDef = useMemo(() => ({
 
 
   return (
-     <>
+     
     <div className="ag-theme-alpine">
     <AgGridReact
       ref={gridRef}
@@ -50,7 +50,7 @@ const defaultColDef = useMemo(() => ({
 
     />
     </div>
-     </>
+     
 
   )
 }

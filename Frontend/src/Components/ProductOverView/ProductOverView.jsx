@@ -64,8 +64,8 @@ const ProductOverView = () => {
  <div className="productOverViewCart">
   
 
- <div className="subcontent"> 
- <span className='subFieldsCart'>Qunatity
+ <div className="subcontent_Overview"> 
+ <span className='subFieldsCart_overview'>Quantity
  <div className="fields quantity-incdec">
             <button className='qty-btn' onClick={decrement}>
               -
@@ -79,22 +79,18 @@ const ProductOverView = () => {
 
 
       
-<span className='subFieldsCart'>Subtotal
+<span className='subFieldsCart_overview'>Subtotal
 
     <h6>100 $</h6>
 </span>
+
+<button className='cartBuyBtn_Overview'> Buy now</button>
+<button className='AddtoCartBtn'>Add to cart</button>
  
-<hr style={{ border: "1px solid black" }} />
-<div className="cartTotal">
-    <span>Total
-        <h6>111 $</h6>
-    </span>
-</div>
 
 
-<button className='AddtoCartBTN'>Add to cart</button>
 
-<button >Buy Now</button>
+ 
 
 </div>
 
