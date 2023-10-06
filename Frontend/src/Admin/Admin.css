@@ -9,20 +9,28 @@
 
 
 .adminHeader {
+   justify-content: center;
    height: 10vh;
-   background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 100%);
+   background-color: white;
    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
    margin-bottom: 0px !important;
+   display: flex;
+   align-items: center;
 }
 
 .adminHeader>h2 {
-   display: flex;
-   justify-content: center;
-   font-size: 2vmax;
-     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,168,255,1) 100%);   height: 10vh;
-   font-family: emoji;
-   margin-bottom: 0px !important;
+   font-size: 34px;
+   font-weight: bold;
+   color: rgba(0, 0, 0, 0.5);
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-bottom: 10px;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   font-family: 'Raleway', sans-serif;
+   -webkit-text-fill-color: transparent;
+   background: linear-gradient(90deg, #34ffe4, #494747);
+   -webkit-background-clip: text;
 }
 
 .ag-theme-alpine {
