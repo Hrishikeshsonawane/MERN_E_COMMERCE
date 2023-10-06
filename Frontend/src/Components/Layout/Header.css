@@ -50,7 +50,7 @@
 .emoji {
   position: absolute;
   top: 50%;
-  left: 90%;
+  left: 86%;
   transform: translate(-50%, -50%);
   transition: all 1s ease-in-out;
 }
