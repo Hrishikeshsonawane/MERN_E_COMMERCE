@@ -1,57 +1,93 @@
-import React,{useRef,useMemo,useState} from 'react'
+import React, { useRef, useMemo, useState } from 'react'
 import "./DashBoard.css"
-import { AgGridReact } from 'ag-grid-react';
-import 'ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
-import 'ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
- 
+import Table from 'react-bootstrap/Table';
+import Badge from 'react-bootstrap/Badge';
+import { MdDelete, MdModeEditOutline } from 'react-icons/md';
+import EditProduct from '../EditProduct/EditProduct';
+import { useNavigate } from 'react-router-dom';
+
+
+
 const DashBoard = () => {
-    const gridRef = useRef(null);
-    
 
-      const [rowData] = useState([
-    {   "Sr_no": "1",
-        "product_name": "Prescription Glasses",
-        "category": "glassess",
-        "company_name": "Warby Parker",
-        "price": "$199.99",
-        "ratings": "4.5",
-        "description": "Customizable prescription glasses for clear vision",
-        "image": "0000111100000111",
-        "quantity" : 2
-    } 
-    
-  ]);
+  const products = {
+    "Sr_no": "1",
+    "product_name": "Prescription Glasses",
+    "category": "glassess",
+    "company_name": "Warby Parker",
+    "price": "$199.99",
+    "ratings": "4.5",
+    "description": "Customizable prescription glasses for clear vision",
+    "image": "0000111100000111",
+    "quantity": 2
+  }
 
-  const columnDefs = useMemo(() => [
-    {field:"Sr_no"},
-    { field: 'category' },
-  { field: "product_name"},
-  { field: 'company_name' },
-  { field: 'description' },
-  { field: 'quantity' },
-  { field: 'ratings' },
-  {field:"Actions"}
-], []);
+  const navigate = useNavigate;
 
-const defaultColDef = useMemo(() => ({
-  sortable: true,
-}), []);
 
+
+  const handleEdit = () => {
+    navigate("/EditProject")
+  }
+
+  const handleDelete = () => {
+    alert("delete")
+  }
 
   return (
-     
-    <div className="ag-theme-alpine">
-    <AgGridReact
-      ref={gridRef}
-      rowData={rowData}
-      columnDefs={columnDefs}
-      defaultColDef={defaultColDef}
-    //  frameworkComponents={frameworkComponents}
 
-    />
-    </div>
-     
+    <>
 
+
+      <div className="table-container">
+        <div className="DashboardTitle">
+          <Badge bg="info">Dashboard</Badge>
+
+        </div>
+
+        <Table responsive="md" scroll borderless bordered hover>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Sr_no</th>
+              <th>product_name</th>
+              <th>category</th>
+              <th>company_name</th>
+
+              <th>price</th>
+
+              <th>description</th>
+              <th>Action</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>{products?.Sr_no}</td>
+              <td>{products?.product_name}</td>
+              <td>{products?.category}</td>
+              <td>{products?.company_name}</td>
+
+              <td>{products?.price}</td>
+
+              <td>{products?.description}</td>
+              <td className='DashboardAction'>
+                <button onClick={handleEdit}>
+                  < MdModeEditOutline />
+                </button>
+                <button onClick={handleDelete}>
+                  < MdDelete />
+                </button>
+
+
+
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+    </>
   )
 }
 

@@ -9,6 +9,7 @@
     "ag-grid-community": "^30.2.0",
     "ag-grid-react": "^30.2.0",
     "bootstrap": "^5.3.2",
+    "cdbreact": "^1.5.18",
     "overlay-navbar": "^1.2.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.0",

@@ -6,6 +6,7 @@ import DashBoard from './Dashboard/DashBoard';
 import Orders from '../Components/Orders/Orders';
 import Users from './Users';
 import AddProduct from './AddProduct/AddProduct';
+import EditProduct from './EditProduct/EditProduct';
 
 
 export default function Admin() {
@@ -27,6 +28,8 @@ export default function Admin() {
                         <Route exact path="/orders" element={<Orders />} />
                         <Route exact path="/users" element={<Users />} />
                         <Route exact path="/AddProduct" element={<AddProduct />} />
+                        <Route exact path="/EditProject" element={<EditProduct />} />
+
                     </Routes>
                 </div>
             </div>
