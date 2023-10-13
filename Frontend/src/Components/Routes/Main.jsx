@@ -19,7 +19,7 @@ export default function Main() {
         <Route extract path='/login' element={<Login />} />
         <Route extract path='/register' element={<Registeration />} />
 
-        <Route extract path='Home /Profile' element={<Profile/>} />
+        <Route extract path='Home/Profile' element={<Profile/>} />
         <Route extract path='Home/Orders' element={<Orders/>} />
         <Route extract path='/Admin/*' element={<Admin/>} />
         <Route extract path='Home/Cart' element={<Cart/>} />

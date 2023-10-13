@@ -6,6 +6,10 @@ import { BiSearchAlt2 } from "react-icons/bi"
 import DropDownList from './DropDownList'
 import { useNavigate } from "react-router-dom";
 import searchEmoji from "../../Sources/searchEmoji.gif"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 export default function Header() {
 
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -41,14 +45,31 @@ export default function Header() {
     console.log(e.target.value)
   }
   const handleShoppingCart = () => {
-    navigate("/Cart")
+    navigate("Home/Cart")
+  }
+   
+  const handleAdmin=()=>{
+    navigate("/Admin/*")
   }
 
-  const handleProfile = () => {
+  const handleProfile=()=>{
+    navigate("Home/Profile")
+
   }
+
+  const handleOrders=()=>{
+    navigate("Home/Orders")
+  }
+   
+
+  const handleLogout=()=>{
+    navigate("/login")
+  }
+
+
   return (
     <div className='header-main-container'>
-      <div className="projectName">
+      {/* <div className="projectName">
         <h4 onClick={handleProjectName}>E-Commerce</h4>
       </div>
 
@@ -94,6 +115,48 @@ export default function Header() {
           {isDropdownVisible && <DropDownList />}
         </div>
       </div>
+      
+        <Route extract path='/*' element={<Home />} />
+        <Route extract path='/login' element={<Login />} />
+        <Route extract path='/register' element={<Registeration />} />
+
+        <Route extract path='Home/Profile' element={<Profile/>} />
+        <Route extract path='Home/Orders' element={<Orders/>} />
+        <Route extract path='/Admin/*' element={<Admin/>} />
+        <Route extract path='Home/Cart' element={<Cart/>} />
+        <Route extract path='Home/ProductOverview' element={<ProductOverView/>} />
+      
+      
+      
+      */}
+
+      <Navbar expand="lg" className="bg-body-tertiary">
+        
+        <Container>
+          <Navbar.Brand href="#home">E_commerce</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <div className="headerContent">
+
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#link" onClick={handleShoppingCart}>Cart</Nav.Link>
+              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <NavDropdown.Item onClick={handleAdmin} href="#action/3.1">Admin</NavDropdown.Item>
+                <NavDropdown.Item onClick={handleProfile} href="#action/3.2">
+                  Profile
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={handleOrders} href="#action/3.3">Orders</NavDropdown.Item>
+                <NavDropdown.Item onClick={handleLogout} href="#action/3.4">
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+          </div>
+        </Container>
+      </Navbar>
     </div >
   )
 }

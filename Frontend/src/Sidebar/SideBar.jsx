@@ -18,6 +18,7 @@ import {
 export default function SideBar() {
  
   const navigate = useNavigate()
+
   return (
     <div className='SideBarContent' style={{ display: 'flex', height: '110vh',  overflow: 'scroll initial' ,"boxShadow":" rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px" }}>
   <CDBSidebar textColor="#000" backgroundColor="#fff"> 
@@ -35,9 +36,9 @@ export default function SideBar() {
         <NavLink exact to="/Admin/addProduct" activeClassName="activeClicked">
           <CDBSidebarMenuItem icon="table">Add Product</CDBSidebarMenuItem>
         </NavLink>
-        <NavLink exact to="/login" activeClassName="activeClicked">
+        {/* <NavLink exact to="" activeClassName="activeClicked">
           <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
-        </NavLink>
+        </NavLink> */}
         <NavLink exact to="" activeClassName="activeClicked">
           <CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem>
         </NavLink>

@@ -24,11 +24,11 @@ export default function Admin() {
                 </>
                 <div className='adminSections'>
                     <Routes>
-                        <Route exact path="/" element={<DashBoard />} />
+                        <Route exact path="/*" element={<DashBoard />} />
                         <Route exact path="/orders" element={<Orders />} />
                         <Route exact path="/users" element={<Users />} />
                         <Route exact path="/AddProduct" element={<AddProduct />} />
-                        <Route exact path="/EditProject" element={<EditProduct />} />
+                        <Route exact path="/Admin/EditProduct" element={<EditProduct />} />
 
                     </Routes>
                 </div>

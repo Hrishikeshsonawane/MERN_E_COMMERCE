@@ -1,52 +1,79 @@
 import  { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
+import Button from "react-bootstrap/Button"
+import Badge from 'react-bootstrap/esm/Badge';
+
 
 const EditProduct = () => {
+    const [quantity, setQuantity] = useState(1); // Initial quantity
 
-    const [show, setShow] = useState(false);
+    const incrementQuantity = () => {
+      setQuantity(quantity + 1);
+    };
+  
+    const decrementQuantity = () => {
+      if (quantity > 1) {
+        setQuantity(quantity - 1);
+      }
+    };
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
   return (
 <>
-<Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
+<div className="addProductPage">
+      <div className="AddproductTitle">
+        <Badge bg="info">Edit Product</Badge>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="name@example.com"
-                autoFocus
-              />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
+      </div>
+      <Form className='form-container'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Product Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter product name" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Company name</Form.Label>
+          <Form.Control type="email" placeholder="Enter company name" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label> Price</Form.Label>
+          <Form.Control type="email" placeholder="Enter price" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Description</Form.Label>
+          <Form.Control type="email" placeholder="Enter description" />
+        </Form.Group>
+        <Form.Group controlId="formFileMultiple" className="mb-3">
+          <Form.Label>Multiple files input example</Form.Label>
+          <Form.Control type="file" multiple />
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label>Quantity</Form.Label>
+          <div className="d-flex align-items-center width-21vh">
+            <Button variant="outline-secondary" onClick={decrementQuantity}>
+              -
+            </Button>
+            <Form.Control
+              type="number"
+              value={quantity}
+              readOnly
+              className="text-center"
+            />
+            <Button variant="outline-secondary" onClick={incrementQuantity}>
+              +
+            </Button>
+          </div>
+        </Form.Group>
+
+        <div className="buttonAddProduct">
+
+          <Button variant="primary" type="submit">
+            Submit
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
+        </div>
+
+      </Form>
+    </div>
+
 </>
 
   )

@@ -1,16 +1,20 @@
     .addProductPage {
         height: 90vh;
-        padding: 0px 30px;
+        padding: 0px 20px;
         margin-top: 3vh;
         /* width: 60vw; */
         overflow-y: scroll;
         box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
 
     }
 
     .buttonAddProduct>button {
         margin-top: 20px;
-        width: 55.5vw;
+        width: 55.5%;
         background-color: #FF6A00;
         color: white;
         border: none;
@@ -36,8 +40,13 @@
 
 
     .AddproductTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 33px;
+        left: 3%;
         font-size: x-large;
-        margin-bottom: 20px;
 
     }
 
@@ -50,8 +59,11 @@
         justify-self: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
+        gap: 25px;
+
+
     }
 
     @media screen and (max-width: 600px) {
@@ -71,9 +83,14 @@
 
 
         .AddproductTitle {
-            font-size: x-large;
+            font-size: 1rem;
+            position: absolute;
+            top: 0px;
+            left: 18px;
+
 
         }
+
         .form-container {
             display: grid;
             grid-template-columns: 1fr;

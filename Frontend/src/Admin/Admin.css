@@ -50,11 +50,9 @@
    justify-content: left;
 }
 
-/* .adminSections{
-    width : 90vw;
-    height : 10vh;
-    background-color:gray;
-  } */
+.adminSections{
+ margin: 0 auto;
+  }
 
 
   @media screen and (max-width: 600px) {
